@@ -1,0 +1,63 @@
+<h1>
+  know a pet in need of adoption?
+</h1>
+
+
+<form #form="ngForm" (submit)="createAnimal($event)">
+	<label>name:</label>
+	<input
+		type="text"
+		name="name"
+		minlength="3"
+		[(ngModel)]="newAnimal.name"
+		#name="ngModel"
+	>
+	<small
+		class="error"
+		[hidden]="name.valid || (name.untouched && !form.submitted)">name is required(minium length of 3 characters)</small>
+	<label>type:</label>
+	<input
+		type="text"
+		name="type"
+		minlength="3"
+		[(ngModel)]="newAnimal.type"
+		#type="ngModel"
+	>
+	<small
+		class="error"
+		[hidden]="type.valid || (type.untouched && !form.submitted)">type is required(minium length of 3 characters)</small>
+	<label>description:</label>
+	<input
+		type="text"
+		name="desc"
+		minlength="5"
+		[(ngModel)]="newAnimal.desc"
+		#desc="ngModel">
+	<small
+		class="error"
+		[hidden]="desc.valid || (desc.pristine && !form.submitted)">desc is required(minium length of 5 characters)</small>
+	<label>Skill 1:
+	<input
+		type="text"
+		name="skill_1"
+		minlength="3"
+		[(ngModel)]="newAnimal.skill_1"
+		#skill_1="ngModel"></label>
+	<label>skill 2:
+	<input
+		type="text"
+		name="skill_2"
+		minlength="3"
+		[(ngModel)]="newAnimal.skill_2"
+		#skill_1="ngModel"></label>
+	<label>skill 3:
+	<input
+		type="text"
+		name="skill_3"
+		minlength="3"
+		[(ngModel)]="newAnimal.skill_3"
+		#skill_1="ngModel"></label>
+	<input class="blue" [disabled]="!form.valid" type="submit">
+	<button [routerLink]="['/']">cancel</button>
+
+</form>

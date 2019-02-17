@@ -1,0 +1,13 @@
+label, input{
+	display: block;
+}
+button{
+	background-color: blue;
+	border-radius: 20px;
+	color: white;
+}
+.blue{
+	border-radius: 20px;
+	background-color: blue;
+	color: white;
+}

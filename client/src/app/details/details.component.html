@@ -1,0 +1,22 @@
+<h1>
+  details about {{animal?.name}}
+</h1>
+<button [routerLink]="['/']">home</button>
+<p>type: {{animal?.type}}</p>
+<div>
+	<ul>
+		skills:
+		<li>{{animal?.skill_1}}</li>
+		<li>{{animal?.skill_2}}</li>
+		<li>{{animal?.skill_3}}</li>
+	</ul>
+</div>
+<p>likes: {{animal?.likes}}</p>
+
+
+<button [disabled]="buttonDisabled == true" (click)="likeAnimal(animal._id)">like this pet</button>
+
+
+
+<button (click)="removeAnimal()">adopt this pet</button>
+
